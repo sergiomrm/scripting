@@ -1,5 +1,7 @@
 #!/bin/bash
+#Obtiene la hora anterior
 fechahora=`date +'^%b %e %H.* status:' -d '-1 hour'`
+#Ultimas 2 bitacoras de donde se obtendra la informacion
 last2=`ls -1tr /var/log/path-apache2/error_log* | tail -2`
 rm statustemp.txt
 for file in ${last2[@]}
